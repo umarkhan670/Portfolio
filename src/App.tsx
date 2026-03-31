@@ -870,16 +870,6 @@ const Contact = () => {
     </span>
   </div>
 
-  {/* Phone */}
-  <div className="flex items-center gap-4">
-    <div className="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white shadow-lg">
-      <Phone size={20} />
-    </div>
-    <span className="text-lg font-medium text-primary">
-      7558546393
-    </span>
-  </div>
-
 </div>
             <div className="flex gap-4">
               {[Instagram, Twitter, Youtube].map((Icon, i) => (
