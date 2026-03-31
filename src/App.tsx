@@ -630,7 +630,6 @@ const Skills = () => {
     { id: 'Programming', label: 'Programming' },
     { id: 'Frontend', label: 'Frontend' },
     { id: 'Database', label: 'Database' },
-    { id: 'Tools', label: 'Tools' },
     { id: 'OS', label: 'OS' },
   ];
 
@@ -641,8 +640,8 @@ const Skills = () => {
       description: 'Content Management Systems',
       skills: [
         { name: 'WordPress', icon: 'wordpress', color: '#21759b' },
+        { name: 'WooCommerce', icon: 'wordpress', color: '#96588a' },
         { name: 'Shopify', icon: 'shopify', color: '#96bf48' },
-        { name: 'Webflow', icon: 'webflow', color: '#4353ff' },
       ]
     },
     {
@@ -652,7 +651,7 @@ const Skills = () => {
       skills: [
         { name: 'PHP', icon: 'php', color: '#777bb4' },
         { name: 'JavaScript', icon: 'js', color: '#f7df1e' },
-        { name: 'TypeScript', icon: 'ts', color: '#3178c6' },
+        { name: 'jQuery', icon: 'jquery', color: '#0769ad' },
       ]
     },
     {
@@ -662,7 +661,7 @@ const Skills = () => {
       skills: [
         { name: 'HTML5', icon: 'html', color: '#e34f26' },
         { name: 'CSS3', icon: 'css', color: '#1572b6' },
-        { name: 'Tailwind CSS', icon: 'tailwind', color: '#06b6d4' },
+        { name: 'Bootstrap', icon: 'bootstrap', color: '#7952b3' },
       ]
     },
     {
@@ -671,18 +670,7 @@ const Skills = () => {
       description: 'Data Storage & Management',
       skills: [
         { name: 'MySQL', icon: 'mysql', color: '#4479a1' },
-        { name: 'PostgreSQL', icon: 'postgres', color: '#336791' },
-        { name: 'MongoDB', icon: 'mongodb', color: '#47a248' },
-      ]
-    },
-    {
-      id: 'Tools',
-      title: 'Tools',
-      description: 'Development & Version Control',
-      skills: [
-        { name: 'Git', icon: 'git', color: '#f05032' },
-        { name: 'GitHub', icon: 'github', color: '#181717' },
-        { name: 'VS Code', icon: 'vscode', color: '#007acc' },
+        { name: 'SQL Server', icon: 'mysql', color: '#cc2927' },
       ]
     },
     {
