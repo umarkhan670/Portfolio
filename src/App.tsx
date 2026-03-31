@@ -9,7 +9,7 @@ import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-do
 import { 
   Instagram, 
   Twitter, 
-  Facebook, 
+  Facebook,
   Youtube, 
   ArrowUpRight, 
   Globe, 
@@ -40,7 +40,7 @@ const PROJECTS_DATA = [
   { title: 'Digital Transformation Services', img: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop', size: 'large', industry: 'IT Services', url: 'https://digitaltransformationservices.com' },
   { title: 'ValveWorks', img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop', size: 'small', industry: 'Industrial', url: 'https://valveworks.com' },
   { title: 'NIBE Limited', img: 'https://images.unsplash.com/photo-1454165833767-027ffea9e778?q=80&w=2070&auto=format&fit=crop', size: 'medium', industry: 'Corporate', url: 'https://nibelimited.com' },
-  { title: 'Nucleosys Technologies', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop', size: 'small', industry: 'Company', url: 'https://nucleosys.com' },
+  { title: 'Nucleosys Technologies', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop', size: 'small', industry: 'Company', url: 'https://nucleosystech.com' },
   { title: 'SellerBaba', img: 'https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=2070&auto=format&fit=crop', size: 'medium', industry: 'Ecommerce Platform', url: 'https://sellerbaba.com' },
   { title: 'PTech Solutions', img: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop', size: 'medium', industry: 'IT Services', url: 'https://ptechsolutions.com' },
   { title: 'PMSOFT', img: 'https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop', size: 'small', industry: 'Software Company', url: 'https://pmsoft.com' },
@@ -858,12 +858,29 @@ const Contact = () => {
           </p>
           
           <div className="space-y-6">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white shadow-lg">
-                <Globe size={20} />
-              </div>
-              <span className="text-lg font-medium text-primary">umarhusenkhan@gmail.com</span>
-            </div>
+            <div className="flex flex-col gap-4">
+  
+  {/* Email */}
+  <div className="flex items-center gap-4">
+    <div className="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white shadow-lg">
+      <Globe size={20} />
+    </div>
+    <span className="text-lg font-medium text-primary">
+      umarhusenkhan@gmail.com
+    </span>
+  </div>
+
+  {/* Phone */}
+  <div className="flex items-center gap-4">
+    <div className="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white shadow-lg">
+      <Phone size={20} />
+    </div>
+    <span className="text-lg font-medium text-primary">
+      7558546393
+    </span>
+  </div>
+
+</div>
             <div className="flex gap-4">
               {[Instagram, Twitter, Youtube].map((Icon, i) => (
                 <a key={i} href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:gradient-bg hover:text-white hover:scale-110 hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] transition-all text-primary">
