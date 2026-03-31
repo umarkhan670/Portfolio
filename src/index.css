@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-bg: #0B0F19;
+  --color-card: #111827;
+  --color-primary: #E2E8F0;
+  --color-secondary: #94A3B8;
+  --color-accent: #4F46E5;
+  --color-accent-end: #9333EA;
+  --color-glow: #22D3EE;
+  --color-border: rgba(255, 255, 255, 0.08);
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-primary antialiased overflow-x-hidden font-sans font-light tracking-[0.2px];
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-[-0.03em] transition-all duration-300 leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h1 {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-accent to-accent-end;
+  }
+
+  p {
+    @apply font-sans font-light tracking-[0.2px] text-sm md:text-base;
+  }
+
+  a, button {
+    @apply transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .text-huge {
+    font-size: clamp(3rem, 10vw, 8rem);
+    line-height: 0.95;
+    @apply font-display font-extrabold tracking-[-0.05em];
+  }
+  
+  .text-editorial {
+    font-size: clamp(1.5rem, 6vw, 4rem);
+    line-height: 1.1;
+    @apply font-display font-bold tracking-[-0.03em];
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, var(--color-accent), var(--color-accent-end));
+  }
+
+  .gradient-bg {
+    background-image: linear-gradient(135deg, var(--color-accent), var(--color-accent-end));
+  }
+
+  .glow-hover {
+    @apply transition-all duration-300;
+  }
+  .glow-hover:hover {
+    box-shadow: 0 0 20px var(--color-glow);
+  }
+}
