@@ -8,9 +8,8 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { 
   Instagram, 
-  Twitter, 
-  Facebook, 
-  Youtube, 
+  Linkedin, 
+  Phone,
   ArrowUpRight, 
   Globe, 
   Menu, 
@@ -409,9 +408,12 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-wrap gap-4 mb-16">
-            {[Youtube, Instagram, Facebook, Twitter].map((Icon, i) => (
-              <a key={i} href="#" className="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center hover:gradient-bg hover:text-white hover:scale-110 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300 text-primary">
-                <Icon size={18} />
+            {[
+              { Icon: Instagram, url: 'https://www.instagram.com/theumarkhan5/' },
+              { Icon: Linkedin, url: 'https://www.linkedin.com/in/umar-khan-profile' }
+            ].map((social, i) => (
+              <a key={i} href={social.url} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center hover:gradient-bg hover:text-white hover:scale-110 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300 text-primary">
+                <social.Icon size={18} />
               </a>
             ))}
           </div>
@@ -628,6 +630,7 @@ const Skills = () => {
     { id: 'Programming', label: 'Programming' },
     { id: 'Frontend', label: 'Frontend' },
     { id: 'Database', label: 'Database' },
+    { id: 'Tools', label: 'Tools' },
     { id: 'OS', label: 'OS' },
   ];
 
@@ -638,8 +641,8 @@ const Skills = () => {
       description: 'Content Management Systems',
       skills: [
         { name: 'WordPress', icon: 'wordpress', color: '#21759b' },
-        { name: 'WooCommerce', icon: 'wordpress', color: '#96588a' },
         { name: 'Shopify', icon: 'shopify', color: '#96bf48' },
+        { name: 'Webflow', icon: 'webflow', color: '#4353ff' },
       ]
     },
     {
@@ -649,7 +652,7 @@ const Skills = () => {
       skills: [
         { name: 'PHP', icon: 'php', color: '#777bb4' },
         { name: 'JavaScript', icon: 'js', color: '#f7df1e' },
-        { name: 'jQuery', icon: 'jquery', color: '#0769ad' },
+        { name: 'TypeScript', icon: 'ts', color: '#3178c6' },
       ]
     },
     {
@@ -659,7 +662,7 @@ const Skills = () => {
       skills: [
         { name: 'HTML5', icon: 'html', color: '#e34f26' },
         { name: 'CSS3', icon: 'css', color: '#1572b6' },
-        { name: 'Bootstrap', icon: 'bootstrap', color: '#7952b3' },
+        { name: 'Tailwind CSS', icon: 'tailwind', color: '#06b6d4' },
       ]
     },
     {
@@ -668,7 +671,18 @@ const Skills = () => {
       description: 'Data Storage & Management',
       skills: [
         { name: 'MySQL', icon: 'mysql', color: '#4479a1' },
-        { name: 'SQL Server', icon: 'mysql', color: '#cc2927' },
+        { name: 'PostgreSQL', icon: 'postgres', color: '#336791' },
+        { name: 'MongoDB', icon: 'mongodb', color: '#47a248' },
+      ]
+    },
+    {
+      id: 'Tools',
+      title: 'Tools',
+      description: 'Development & Version Control',
+      skills: [
+        { name: 'Git', icon: 'git', color: '#f05032' },
+        { name: 'GitHub', icon: 'github', color: '#181717' },
+        { name: 'VS Code', icon: 'vscode', color: '#007acc' },
       ]
     },
     {
@@ -864,10 +878,23 @@ const Contact = () => {
               </div>
               <span className="text-lg font-medium text-primary">umarhusenkhan@gmail.com</span>
             </div>
+            
+            <div className="flex items-center gap-4">
+              <a href="tel:7558546393" className="flex items-center gap-4 group">
+                <div className="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform">
+                  <Phone size={20} />
+                </div>
+                <span className="text-lg font-medium text-primary group-hover:text-glow transition-colors">7558546393</span>
+              </a>
+            </div>
+
             <div className="flex gap-4">
-              {[Instagram, Twitter, Youtube].map((Icon, i) => (
-                <a key={i} href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:gradient-bg hover:text-white hover:scale-110 hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] transition-all text-primary">
-                  <Icon size={18} />
+              {[
+                { Icon: Instagram, url: 'https://www.instagram.com/theumarkhan5/' },
+                { Icon: Linkedin, url: 'https://www.linkedin.com/in/umar-khan-profile' }
+              ].map((social, i) => (
+                <a key={i} href={social.url} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:gradient-bg hover:text-white hover:scale-110 hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] transition-all text-primary">
+                  <social.Icon size={18} />
                 </a>
               ))}
             </div>
